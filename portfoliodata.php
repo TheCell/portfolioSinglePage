@@ -1,5 +1,5 @@
 <?php
-$directory = './portfoliodata';
+$directory = 'portfoliodata';
 $jsonOptions = JSON_PRETTY_PRINT;
 // JSON_OPTIONS is a bitmask consisting of:
 //   JSON_HEX_QUOT, JSON_HEX_TAG, JSON_HEX_AMP, JSON_HEX_APOS, JSON_NUMERIC_CHECK, 
