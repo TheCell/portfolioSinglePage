@@ -1,0 +1,15 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+}
+
+#mainimg
+{
+    width: 400px;
+}
+
+#maindiv
+{
+    background-color: red;
+}
