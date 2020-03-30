@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ProjectView msg="Welcome to Your Vue.js App"/>
+    <NavigationView />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProjectView from './components/ProjectView.vue'
+import NavigationView from './components/NavigationView.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProjectView,
+    NavigationView
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app
+{
+    width: 100vw;
+    height: 100vh;
 }
+
+@import "./assets/style.scss";
+@import "./assets/reset.css";
 </style>
