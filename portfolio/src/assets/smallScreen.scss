@@ -1,0 +1,67 @@
+@media (max-width: $bigLayoutMinPixel - 1)
+{
+    .projectview
+    {
+        width: 100vw;
+    }
+
+    #navigation
+    {
+        width: 400px;
+        height: 100vh;
+        position: absolute;
+        left: 100vw;
+        background-color: cadetblue;
+        display: none;
+    }
+
+    $contentWidth: 50vw;
+    $contentMaxWidth: 400px;
+    .upperPart
+    {
+        // width: calc(100vw - 40%);
+        // padding-right: 20%;
+        // padding-left: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        width: $contentWidth;
+        max-width: $contentMaxWidth;
+        min-width: 300px;
+        flex-direction: row;
+        height: 55vh;
+        overflow: hidden;
+    }
+
+    .lowerPart
+    {
+        height: 45vh;
+    }
+    
+    .titleContainer
+    {
+        width: 100%;
+        order: 1;
+        margin-top: auto;
+    }
+
+    .mainImageContainer
+    {
+        // height: auto;
+        width: 100%;
+        order: 2;
+        // width: 75vw;
+        height: calc(#{$contentWidth} / (16/9));
+        max-height: calc(#{$contentMaxWidth} / (16/9));
+    }
+    
+    .descriptionContainer
+    {
+        width: 100%;
+        order: 3;
+    }
+
+    .additionalInfo
+    {
+        display: none;
+    }
+}

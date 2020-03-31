@@ -1,14 +1,32 @@
 <template>
     <div class="projectview">
-        <div class="gridsystem">
-            <div class="titleContainer">
-                here is a title
-            </div>
+        <div class="upperPart">
             <div class="mainImageContainer">
                 Im an image
             </div>
+            <div class="titleContainer">
+                here is a title
+            </div>
             <div class="descriptionContainer">
                 {{ msg }}
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        <div class="lowerPart">
+            <div class="media">
+                here will be an image
+            </div>
+            <div class="media">
+                here will be an image
+            </div>
+            <div class="media">
+                here will be an image or video
+            </div>
+            <div class="media additionalInfo">
+                Additional information
+            </div>
+            <div class="challanges">
+                I'm challanges and responsibility
             </div>
         </div>
     </div>

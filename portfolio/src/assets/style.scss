@@ -1,127 +1,68 @@
-$bigLayoutMinPixel: 1200px;
+$bigLayoutMinPixel: 1400px;
 
-@media (max-width: $bigLayoutMinPixel - 1)
+body
 {
-    .projectview
-    {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #navigation
-    {
-        width: 400px;
-        height: 100vh;
-        position: absolute;
-        // right: 0px;
-        left: 100vw;
-        background-color: cadetblue;
-    }
-
-    .gridsystem
-    {
-        grid-template-columns: 18% 1fr 1fr 18%;
-        grid-template-rows: 25% 25% 1fr 1fr;
-        grid-template-areas: 
-            " . maincontent maincontent . "
-            " . maincontent maincontent . "
-            "media1 media1 media2 media2"
-            "media3 media3 challange challange";
-    }
-
-    .titleContainer
-    {
-        grid-area: maincontent;
-    }
-
-    .mainImageContainer
-    {
-        grid-area: maincontent;
-    }
-
-    .descriptionContainer
-    {
-        grid-area: maincontent;
-    }
+    width: 100vw;
+    height: 100vh;
+    font-size: 11pt;
 }
-
-@media (min-width: $bigLayoutMinPixel)
-{
-    .projectview
-    {
-        width: calc(100vw - 400px);
-        height: 100vh;
-    }
-
-    #navigation
-    {
-        width: 400px;
-        height: 100vh;
-        position: relative;
-        background-color: red;
-    }
-
-    .gridsystem
-    {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-            "mainimg mainimg maincontent maincontent"
-            "mainimg mainimg maincontent maincontent"
-            "media1 media2 challange challange"
-            "media3 additional challange challange";
-    }
-
-    .titleContainer
-    {
-        grid-area: maincontent;
-    }
-
-    .mainImageContainer
-    {
-        grid-area: mainimg;
-    }
-
-    .descriptionContainer
-    {
-        grid-area: challange;
-    }
-}
-
 
 .projectview
 {
-    // display:inline-block;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
 }
 
 #navigation
 {
-    // display:inline-block;
-    float: left;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba($color: #FF0000, $alpha: .5);
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-.gridsystem
+.upperPart
 {
-    display: grid;
-    width: 100%;
-    height: 100%;
+    // flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50vh;
 }
 
-.titleContainer
+.lowerPart
 {
-    background-color: chocolate;
-    justify-self: stretch;
+    height: 50vh;
 }
 
 .mainImageContainer
 {
+    height: 100%;
+    width: 50%;
     background-color: cornflowerblue;
-    justify-self: stretch;
 }
+
+
+.titleContainer
+{
+    margin-top: auto;
+    height: 50px;
+    width: 50%;
+    // align-self: flex-end;
+    background-color: chocolate;
+}
+
 
 .descriptionContainer
 {
+    width: 50%;
+    // align-self: flex-end;
     background-color: cornsilk;
-    justify-self: stretch;
 }
+
+@import "smallScreen.scss";
+@import "bigScreen.scss";
