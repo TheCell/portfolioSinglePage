@@ -1,5 +1,6 @@
 <template>
     <div id="navigation">
+      <div v-for="(item, index) in projectnames" :key="index">{{ item[0] }}</div>
     </div>
 </template>
 
@@ -7,9 +8,26 @@
 export default
 {
   name: 'NavigationView',
-  props:
-  {}
-
+  props: {
+    projectnames: {
+      type: Array
+    }
+  },
+  data: function () {
+    // console.log('projectnames data:', this.projectnames)
+    return {}
+  },
+  mounted () {
+    console.log(this.projectnames)
+  },
+  created: function () {
+    // console.log('projectnames created:', this.projectnames)
+  },
+  watch: {
+    projectnames: function (oldval, newval) {
+      console.log(oldval, newval)
+    }
+  }
 }
 </script>
 
