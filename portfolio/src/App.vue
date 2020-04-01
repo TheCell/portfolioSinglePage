@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <ProjectView msg="Welcome to Your Vue.js App"/>
-    <NavigationView :projectnames="portfoliodata" />
+    <NavigationView :projectnames="portfoliodata"
+      v-on:changeProject="onChangeProject" />
+      <!-- {{ currentProject }} -->
   </div>
 </template>
 
@@ -19,7 +21,8 @@ export default
     },
     data: function () {
       return {
-        portfoliodata: []
+        portfoliodata: [],
+        currentProject: 0
       }
     },
     mounted () {
@@ -32,34 +35,15 @@ export default
         xhttp.onreadystatechange = function () {
           if (this.readyState === 4 && this.status === 200) {
               vuethis.portfoliodata = Object.entries(JSON.parse(xhttp.responseText))
-              // console.log(vuethis)
-              // console.log(this.portfoliodata)
-              // console.log(vuethis.portfoliodata)
-              // window.portfoliodata = this.portfoliodata
           }
         }
-        // .bind(this)
+
         xhttp.open('GET', 'http://localhost/portfolioSinglePage/portfolio/public/portfoliodata.php', true)
         xhttp.send()
+      },
 
-        // fetch('http://localhost/portfolioSinglePage/portfolio/public/portfoliodata.php', {
-        //     method: 'GET',
-        //     dataType: 'json',
-        //     // mode: 'no-cors',
-        //     headers: {
-        //       Accept: 'application/json'
-        //     }
-        //   })
-        //   .then(response => {
-        //     console.log(response)
-        //     response.json()
-        //   })
-        //   .then(data => {
-        //     console.log(data)
-        //   })
-        //   .catch(error => {
-        //     console.log('request failed', error)
-        //   })
+      onChangeProject (params) {
+        console.log('I should change project', params)
       }
     }
 }
