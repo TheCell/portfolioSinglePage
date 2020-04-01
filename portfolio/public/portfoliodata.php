@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header('Content-type:application/json;charset=utf-8');
 $directory = 'portfoliodata';
 $jsonOptions = JSON_PRETTY_PRINT;
 // JSON_OPTIONS is a bitmask consisting of:

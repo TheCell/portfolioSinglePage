@@ -1,0 +1,5 @@
+thumbnails/*
+portfoliodata/*
+
+!thumbnails/_Default.webp
+!portfoliodata/_Default

@@ -16,7 +16,8 @@
     }
 
     $contentWidth: 50vw;
-    $contentMaxWidth: 400px;
+    $topContentMaxWidth: 400px;
+    $bottomContentMaxWidth: 800px;
     .upperPart
     {
         // width: calc(100vw - 40%);
@@ -25,7 +26,7 @@
         margin-left: auto;
         margin-right: auto;
         width: $contentWidth;
-        max-width: $contentMaxWidth;
+        max-width: $topContentMaxWidth;
         min-width: 300px;
         flex-direction: row;
         height: 55vh;
@@ -35,6 +36,10 @@
     .lowerPart
     {
         height: 45vh;
+        width: 100%;
+        max-width: $bottomContentMaxWidth;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .titleContainer
@@ -51,7 +56,7 @@
         order: 2;
         // width: 75vw;
         height: calc(#{$contentWidth} / (16/9));
-        max-height: calc(#{$contentMaxWidth} / (16/9));
+        max-height: calc(#{$topContentMaxWidth} / (16/9));
     }
     
     .descriptionContainer
@@ -63,5 +68,21 @@
     .additionalInfo
     {
         display: none;
+    }
+
+    .challanges
+    {
+        grid-column-start: span 2;
+        grid-column-end: unset;
+        grid-row-start: span 1;
+        grid-row-end: unset;
+    }
+
+    .media
+    {
+        grid-column-start: span 2;
+        grid-column-end: unset;
+        grid-row-start: span 1;
+        grid-row-end: unset;
     }
 }
