@@ -47,6 +47,8 @@
         width: 100%;
         order: 1;
         margin-top: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .mainImageContainer
@@ -61,6 +63,8 @@
     
     .descriptionContainer
     {
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
         order: 3;
     }
