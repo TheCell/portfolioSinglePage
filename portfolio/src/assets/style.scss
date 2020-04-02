@@ -1,12 +1,20 @@
 $bigLayoutMinPixel: 1400px;
 $minheight: 500px;
 
+@font-face
+{
+    font-family: 'Merriweather';
+    src: url("assets/Merriweather-Regular.ttf") format('truetype'); /* Safari, Android, iOS */
+}
+
 body
 {
     width: 100vw;
     height: 100vh;
     font-size: 11pt;
     min-height: $minheight;
+    font-family: Merriweather, serif;
+    font-size: 11px;
 }
 
 .projectview
@@ -63,10 +71,12 @@ body
 .titleContainer
 {
     margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 20px;
     // height: 50px;
     width: 50%;
     // align-self: flex-end;
-    background-color: chocolate;
+    // background-color: chocolate;
 
     span
     {
@@ -77,8 +87,9 @@ body
 .descriptionContainer
 {
     width: 50%;
+    margin-left: 20px;
     // align-self: flex-end;
-    background-color: cornsilk;
+    // background-color: cornsilk;
 }
 
 .projecttitle
@@ -88,7 +99,6 @@ body
 
 .subtitle
 {
-    font-size: 11px;
 }
 
 @import "smallScreen.scss";
