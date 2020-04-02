@@ -1,10 +1,12 @@
 $bigLayoutMinPixel: 1400px;
+$minheight: 500px;
 
 body
 {
     width: 100vw;
     height: 100vh;
     font-size: 11pt;
+    min-height: $minheight;
 }
 
 .projectview
@@ -12,13 +14,13 @@ body
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 100vh;
+    height: 100%;
 }
 
 #navigation
 {
     width: 400px;
-    height: 100vh;
+    height: 100%;
     background-color: rgba($color: #FF0000, $alpha: .5);
     position: absolute;
     right: 0;
@@ -32,12 +34,12 @@ body
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 50%;
 }
 
 .lowerPart
 {
-    height: 50vh;
+    height: 50%;
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 25% 25% 25% 25%;

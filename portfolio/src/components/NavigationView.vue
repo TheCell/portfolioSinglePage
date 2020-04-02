@@ -1,9 +1,8 @@
 <template>
     <div id="navigation">
-      <div v-for="(item, index) in projectnames" :key="index"
-        @click="$emit('changeProject', 1)">
-
-        {{ item[0] }}
+      <div v-for="(item, index) in navigationData" :key="index"
+        @click="$emit('changeProject', index)">
+        {{ item }}
       </div>
     </div>
 </template>
@@ -13,22 +12,22 @@ export default
 {
   name: 'NavigationView',
   props: {
-    projectnames: {
+    navigationData: {
       type: Array
     }
   },
   data: function () {
-    // console.log('projectnames data:', this.projectnames)
+    // console.log('navigationData data:', this.navigationData)
     return {}
   },
   mounted () {
-    // console.log(this.projectnames)
+    // console.log(this.navigationData)
   },
   created: function () {
-    // console.log('projectnames created:', this.projectnames)
+    // console.log('navigationData created:', this.navigationData)
   },
   watch: {
-    projectnames: function (oldval, newval) {
+    navigationData: function (oldval, newval) {
       // console.log(oldval, newval)
     }
   }
