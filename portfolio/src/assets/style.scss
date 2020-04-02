@@ -1,5 +1,7 @@
 $bigLayoutMinPixel: 1400px;
 $minheight: 500px;
+$paddingLeft: 20px;
+$paddingRight: 20px;
 
 @font-face
 {
@@ -15,6 +17,7 @@ body
     min-height: $minheight;
     font-family: Merriweather, serif;
     font-size: 11px;
+    line-height: 1.2;
 }
 
 .projectview
@@ -22,12 +25,13 @@ body
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 100%;
+    height: calc(100vh - 20px);
+    margin-bottom: 20px;
 }
 
 #navigation
 {
-    width: 400px;
+    width: 300px;
     height: 100%;
     background-color: rgba($color: #FF0000, $alpha: .5);
     position: absolute;
@@ -38,7 +42,6 @@ body
 
 .upperPart
 {
-    // flex-grow: 1;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -59,26 +62,39 @@ body
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 3;
+    
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+
+    div
+    {
+        margin-top: 30px;
+    }
 }
 
 .mainImageContainer
 {
     height: 100%;
     width: 50%;
-    background-color: cornflowerblue;
+    background-position: center;
+    background-size: cover;
+}
+
+.smallImageContainer
+{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .titleContainer
 {
     margin-top: auto;
     margin-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: calc(50% - 40px);
-    // height: 50px;
-
-    // align-self: flex-end;
-    // background-color: chocolate;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+    width: calc(50% - 40px); // has to be done manually for now
 
     span
     {
@@ -88,11 +104,9 @@ body
 
 .descriptionContainer
 {
-    width: calc(50% - 40px);
-    padding-left: 20px;
-    padding-right: 20px
-    // align-self: flex-end;
-    // background-color: cornsilk;
+    width: calc(50% - 40px); // has to be done manually for now
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
 }
 
 .projecttitle
@@ -100,8 +114,21 @@ body
     font-size: 24px;
 }
 
-.subtitle
+.minititle
 {
+    font-size: 13px;
+}
+
+.challangeEntry
+{
+    display: block;
+    margin-left: 10px;
+}
+
+.media
+{
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 @import "smallScreen.scss";

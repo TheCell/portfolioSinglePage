@@ -24,7 +24,7 @@ export default
       return {
         allData: {},
         navigationData: [],
-        projectData: { Information: { title: '', year: '', scope: '', link: '' }, Description: '', 'Additional Information': [{ '': '' }], Challanges: [''], Responsibilities: [''], Technology: [''] },
+        projectData: { Mainimage: '', images: [], video: '', Information: { title: '', year: '', scope: '', link: '' }, Description: '', 'Additional Information': [{ '': '' }], Challanges: [''], Responsibilities: [''], Technology: [''] },
         currentProject: 0,
         weburl: 'http://localhost:8080/portfolioSinglePage/portfolio/public/'
       }
@@ -69,6 +69,29 @@ export default
         axios.get(this.weburl + matches[0])
           .then(function (response) {
             vuethis.projectData = response.data
+            vuethis.projectData.Mainimage = vuethis.weburl + items.filter(s => s.includes('main.'))[0]
+            vuethis.projectData.images = []
+            var temparr = []
+            temparr = [].concat(temparr, items.filter(s => s.includes('.png')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.PNG')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.jpg')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.JPG')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.jpeg')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.JPEG')))
+            temparr = temparr.filter(s => !s.includes('main'))
+            for (let i = 0; i < temparr.length; i++) {
+              temparr[i] = vuethis.weburl + temparr[i]
+            }
+            vuethis.projectData.images = temparr
+
+            vuethis.projectData.video = ''
+            temparr = []
+            temparr = [].concat(temparr, items.filter(s => s.includes('.mp4')))
+            temparr = [].concat(temparr, items.filter(s => s.includes('.MP4')))
+            if (temparr.length > 0) {
+              vuethis.projectData.video = vuethis.weburl + temparr[0]
+            }
+            console.log(vuethis.projectData.video)
             vuethis.currentProject = projectnr
           })
           .catch(function (error) {

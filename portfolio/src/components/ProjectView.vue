@@ -1,8 +1,8 @@
 <template>
     <div class="projectview">
         <div class="upperPart">
-            <div class="mainImageContainer">
-                Im an image
+            <div class="mainImageContainer" :id="_uid" :style="{ 'background-image': backgroundImage }">
+                <!-- {{ allInformations.Mainimage }} -->
             </div>
             <div class="titleContainer">
                 <span class="projecttitle">{{ allInformations.Information.title }}</span>
@@ -16,19 +16,44 @@
         </div>
         <div class="lowerPart">
             <div class="media">
-                here will be an image
+                <div class="smallImageContainer" :style="{ 'background-image': imageone }">
+                </div>
             </div>
             <div class="media">
-                here will be an image
+                <div class="smallImageContainer" :style="{ 'background-image': imagetwo }">
+                </div>
             </div>
             <div class="media">
-                here will be an image or video
+                <div class="smallImageContainer" :style="{ 'background-image': imagethree }">
+                </div>
+                <!-- <video width="320" height="240" controls>
+                    <source :src="videourl" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
             </div>
             <div class="media additionalInfo">
-                Additional information
+                <div v-for="(item, index) in allInformations['Additional Information']" :key="index">
+                    <span>
+                        {{ index }}:
+                    </span>
+                    <span>
+                        <a :href="item">{{ item }}</a>
+                    </span>
+                </div>
             </div>
             <div class="challanges">
-                I'm challanges and responsibility
+                <div class="challangelist">
+                    <span class="minititle">My responsibilities</span>
+                    <span class="challangeEntry" v-for="(challange, index) in allInformations['Challanges']" :key="`${index}`">
+                        {{ challange }}
+                    </span>
+                </div>
+                <div class="Responsibilitieslist">
+                    <span class="minititle">Challanges</span>
+                    <span class="challangeEntry" v-for="(respo, index) in allInformations['Responsibilities']" :key="`${index}`">
+                        {{ respo }}
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -43,9 +68,22 @@ export default
     {
         allInformations: Object
     },
+    data: function () {
+        return {
+            backgroundImage: '',
+            videourl: '',
+            imageone: '',
+            imagetwo: '',
+            imagethree: ''
+        }
+    },
     watch: {
         allInformations: function (oldval, newval) {
-            console.log(newval)
+            this.backgroundImage = 'url("' + this.allInformations.Mainimage + '")'
+            this.imageone = 'url("' + this.allInformations.images[0] + '")'
+            this.imagetwo = 'url("' + this.allInformations.images[1] + '")'
+            this.imagethree = 'url("' + this.allInformations.images[2] + '")'
+            this.videourl = '"' + this.allInformations.videourl + '"'
         }
     }
 }

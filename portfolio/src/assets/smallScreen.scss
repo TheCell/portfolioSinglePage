@@ -3,6 +3,7 @@
     .projectview
     {
         width: 100vw;
+        height: 150vh;
     }
 
     #navigation
@@ -29,13 +30,13 @@
         max-width: $topContentMaxWidth;
         min-width: 300px;
         flex-direction: row;
-        height: 55vh;
+        // height: 55vh;
         overflow: hidden;
     }
 
     .lowerPart
     {
-        height: 45vh;
+        // height: 45vh;
         width: 100%;
         max-width: $bottomContentMaxWidth;
         margin-left: auto;
