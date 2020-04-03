@@ -8,12 +8,10 @@
 
     #navigation
     {
-        width: 400px;
+        width: 300px;
         height: 100vh;
         position: absolute;
-        left: 100vw;
-        background-color: cadetblue;
-        display: none;
+        right: 0;
     }
 
     $contentWidth: 50vw;
