@@ -26,8 +26,11 @@ export default
         navigationData: [],
         projectData: { Mainimage: '', images: [], video: '', Information: { title: '', year: '', scope: '', link: '' }, Description: '', 'Additional Information': [{ '': '' }], Challanges: [''], Responsibilities: [''], Technology: [''] },
         currentProject: 0,
-        weburl: 'http://localhost:8080/portfolioSinglePage/portfolio/public/'
+        weburl: document.URL
       }
+    },
+    created () {
+        this.weburl = document.URL + 'portfolioSinglePage/portfolio/public/'
     },
     mounted () {
         this.getajaxContent(0)

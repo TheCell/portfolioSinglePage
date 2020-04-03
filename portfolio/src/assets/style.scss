@@ -13,11 +13,10 @@ body
 {
     width: 100vw;
     height: 100vh;
-    font-size: 11pt;
     min-height: $minheight;
     font-family: Merriweather, serif;
-    font-size: 13px;
     color: #444444;
+    font-size: 14px;
     line-height: 1.2;
     overflow-x: hidden;
 }
@@ -33,7 +32,8 @@ body
 
 #navigation
 {
-    width: 300px;
+    width: calc(300px - 10px);
+    padding-right: 10px;
     height: 100%;
     // background-color: rgba($color: #FF0000, $alpha: .5);
     position: absolute;
@@ -131,7 +131,8 @@ body
 
 .minititle
 {
-    font-size: 13px;
+    font-size: 16px;
+    color: #000000;
 }
 
 .challangeEntry
