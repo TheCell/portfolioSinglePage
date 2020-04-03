@@ -2,7 +2,7 @@
   <div id="app">
     <ProjectView :allInformations="projectData" />
     <NavigationView :navigationData="navigationData"
-      v-on:changeProject="onChangeProject" />
+      v-on:changeProject="onChangeProject" :currentActive="currentProject" />
       <!-- {{ currentProject }} -->
   </div>
 </template>
