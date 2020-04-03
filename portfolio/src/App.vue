@@ -91,7 +91,6 @@ export default
             if (temparr.length > 0) {
               vuethis.projectData.video = vuethis.weburl + temparr[0]
             }
-            console.log(vuethis.projectData.video)
             vuethis.currentProject = projectnr
           })
           .catch(function (error) {
