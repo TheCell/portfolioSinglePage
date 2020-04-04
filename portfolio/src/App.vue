@@ -97,7 +97,7 @@ export default
               vuethis.projectData.video = vuethis.weburl + temparr[0]
             }
             vuethis.currentProject = projectnr
-            vuethis.$gtag.event('pageview', { project: projectname })
+            vuethis.$gtag.event(projectname)
           })
           .catch(function (error) {
             // handle error
