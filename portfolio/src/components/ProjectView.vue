@@ -42,10 +42,7 @@
                 <div class="media additionalInfo" :key="newNumber">
                     <div v-for="(item, index) in allInformations['Additional Information']" :key="index">
                         <span>
-                            {{ index }}:
-                        </span>
-                        <span>
-                            <a :href="item">{{ item }}</a>
+                            <a :href="item">{{ index }}</a>
                         </span>
                     </div>
                 </div>
