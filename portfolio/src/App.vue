@@ -62,6 +62,8 @@ export default
       changeProjectData (projectnr) {
         // console.log('changing to ', projectnr)
         var newdata = Object.entries(this.allData)[projectnr]
+        var projectname = newdata[0]
+        projectname = projectname.replace(/\s+/g, '-').toLowerCase()
         // console.log(Object.entries(this.allData))
         const items = newdata[1]
         const matches = items.filter(s => s.includes('.json'))
@@ -95,6 +97,7 @@ export default
               vuethis.projectData.video = vuethis.weburl + temparr[0]
             }
             vuethis.currentProject = projectnr
+            vuethis.$gtag.event('pageview', { project: projectname })
           })
           .catch(function (error) {
             // handle error
