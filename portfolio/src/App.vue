@@ -30,7 +30,7 @@ export default
       }
     },
     created () {
-        this.weburl = document.URL + 'portfolioSinglePage/portfolio/public/'
+        // this.weburl = document.URL + 'portfolioSinglePage/portfolio/public/'
     },
     mounted () {
         this.getajaxContent(0)
