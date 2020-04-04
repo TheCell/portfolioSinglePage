@@ -5,6 +5,9 @@
           @click="$emit('changeProject', index)"
           v-bind:class="{ 'isactive': index === currentActive }">
           {{ item }}
+          <!-- <img v-if="projectType[index] === 'phys'" src="type_physical.png" height="16" width="16"/>
+          <img v-if="projectType[index] === 'soft'" src="type_games.png" height="16" width="16"/>
+          <img v-if="projectType[index] === 'game'" src="type_software.png" height="16" width="16"/> -->
         </div>
     </div>
 </template>
