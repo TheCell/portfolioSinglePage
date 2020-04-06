@@ -24,7 +24,7 @@ export default
       return {
         allData: {},
         navigationData: [],
-        projectData: { Mainimage: '', images: [], video: '', Information: { title: '', year: '', scope: '', link: '' }, Description: '', 'Additional Information': [{ '': '' }], Challanges: [''], Responsibilities: [''], Technology: [''] },
+        projectData: { Mainimage: '', images: [], video: '', Information: { title: '', year: '', scope: '', link: '' }, Description: '', 'Additional Information': [{ '': '' }], Challenges: [''], Responsibilities: [''], Technology: [''] },
         currentProject: 0,
         weburl: document.URL
       }

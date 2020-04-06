@@ -50,13 +50,13 @@
             <transition name="fade" mode="out-in">
                 <div class="challanges" :key="newNumber">
                     <div class="challangelist">
-                        <span class="minititle">My responsibilities</span>
-                        <span class="challangeEntry" v-for="(challange, index) in allInformations['Challanges']" :key="`${index}`">
+                        <span class="minititle">Challenges</span>
+                        <span class="challangeEntry" v-for="(challange, index) in allInformations['Challenges']" :key="`${index}`">
                             {{ challange }}
                         </span>
                     </div>
                     <div class="Responsibilitieslist">
-                        <span class="minititle">Challanges</span>
+                        <span class="minititle">My responsibilities</span>
                         <span class="challangeEntry" v-for="(respo, index) in allInformations['Responsibilities']" :key="`${index}`">
                             {{ respo }}
                         </span>
