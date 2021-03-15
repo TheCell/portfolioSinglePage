@@ -1,4 +1,5 @@
 $bigLayoutMinPixel: 1400px;
+$phoneLayoutMaxPixel: 900px;
 $minheight: 500px;
 $paddingLeft: 20px;
 $paddingRight: 20px;
@@ -167,3 +168,4 @@ body
 
 @import "smallScreen.scss";
 @import "bigScreen.scss";
+@import "phoneScreen.scss";

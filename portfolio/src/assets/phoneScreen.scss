@@ -1,0 +1,77 @@
+@media (max-width: $phoneLayoutMaxPixel - 1)
+{
+    #navigation
+    {
+        width: unset;
+        position: relative;
+        margin: 20px 0px;
+
+        div {
+            text-align: center;
+        }
+    }
+
+    .projectview
+    {
+        display: block;
+    }
+
+    .upperPart
+    {
+        display: block;
+        height: unset;
+    }
+
+    .lowerPart
+    {
+        height: unset;
+        grid-template-rows: unset;
+        grid-template-columns: unset;
+    }
+
+    .mainImageContainer
+    {
+        width: unset;
+        height: 16em;
+    }
+
+    .challanges
+    {
+        grid-row: unset;
+        grid-column: unset;
+        padding-bottom: 20px;
+    }
+
+    .titleContainer
+    {
+        width: unset;
+        margin: unset;
+        padding: 20px;
+    }
+
+    .descriptionContainer
+    {
+        display: block;
+        width: unset;
+        padding: 20px;
+    }
+
+    .media
+    {
+        margin-left: unset;
+        margin-top: unset;
+    }
+
+    .smallImageContainer
+    {
+        height: 56vw;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .additionalInfo
+    {
+        padding: 20px;
+        padding-bottom: unset;
+    }
+}
