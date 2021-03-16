@@ -1,5 +1,11 @@
 @media (max-width: $phoneLayoutMaxPixel - 1)
 {
+    body
+    {
+        height: unset;
+        width: unset;
+    }
+
     #navigation
     {
         width: unset;
@@ -14,6 +20,7 @@
     .projectview
     {
         display: block;
+        height: unset;
     }
 
     .upperPart
